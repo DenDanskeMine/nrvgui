@@ -23,8 +23,6 @@ class AppUpdater {
   }
 }
 
-
-
 let mainWindow: BrowserWindow | null = null;
 
 ipcMain.on('ipc-example', async (event, arg) => {
@@ -126,8 +124,6 @@ app.on('window-all-closed', () => {
   }
 });
 
-
-
 app
   .whenReady()
   .then(() => {
@@ -139,5 +135,3 @@ app
     });
   })
   .catch(console.log);
-
-  

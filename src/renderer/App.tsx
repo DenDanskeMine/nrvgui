@@ -2,6 +2,7 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import icon from '../../assets/Arla-logo.png';
 import './App.css';
+import { ipcRenderer } from 'electron';
 
 
 function Hello() {
@@ -29,7 +30,7 @@ function Hello() {
           target="_blank"
           rel="noreferrer"
         >
-<button type="button" onClick={() => ipcRenderer.invoke('run-script', '/path/to/your/script.ps1')}>
+<button type="button" onClick={() => window.electron.runBat('C:\\Users\\CROSK\\OneDrive - Arla Foods amba\\Desktop\\scripts\\auto-winsetup\\script copy\\start.bat')}>
   <span role="img" aria-label="folded hands">
   🛠️
   </span>
@@ -42,6 +43,8 @@ function Hello() {
     </div>
   );
 }
+
+
 
 export default function App() {
   return (
